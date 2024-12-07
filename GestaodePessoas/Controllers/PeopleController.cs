@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GestaodePessoas.Data;
 using GestaodePessoas.Models;
+using GestaodePessoas.Enum;
 
 namespace GestaodePessoas.Controllers
 {
@@ -76,6 +77,7 @@ namespace GestaodePessoas.Controllers
             }
             return View(person);
         }
+        
 
         // POST: People/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -110,6 +112,8 @@ namespace GestaodePessoas.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(person);
+
+           
         }
 
         // GET: People/Delete/5
